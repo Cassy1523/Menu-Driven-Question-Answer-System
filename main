@@ -1,0 +1,153 @@
+import matplotlib.pyplot as pyplot
+def create_menu():
+  print("Menu")
+  print("Create or Select a Question:")
+
+create_menu()
+  
+create_question = input()
+
+##Chapter 1: Questions 1 & 2 + 4 Answer Options Each
+chapter_1q1 = "Which of the following characters is used to give single-line comments in Python?"
+chapter_1a1 = "//"
+chapter_1a2 = "#"
+chapter_1a3 = "!"
+chapter_1a4 = "/*"
+chapter_1q2 = ("What will be the output of the following Python code snippet if x=1?: x<<2")
+chapter_1a5 = "4"
+chapter_1a6 = "2"
+chapter_1a7 = "1"
+chapter_1a8 = "8"
+##Chapter 2: Questions 1 & 2 + 4 Answer Options Each
+chapter_2q1 = "Which of the following is the correct extension of the Python File?"
+chapter_2a1 = ".python"
+chapter_2a2 = ".pl"
+chapter_2a3 = ".py"
+chapter_2a4 = ".p"
+chapter_2q2 = "Which of the following is used to define a block of code in Python language?"
+chapter_2a5 = "Indentation"
+chapter_2a6 = "Key"
+chapter_2a7 = "Brackets"
+chapter_2a8 = "All of the above"
+#Below is two lists to store information for the following code
+answers = []
+question = []
+if create_question == "Create" or create_question == "create":
+  print("Select a chapter (enter a digit)")
+  create_chapter = input()
+  question_1 = input("Enter Question: ")
+  print("Enter answer option 1:")
+  answer_1 = input()
+  print("Enter answer option 2:")
+  answer_2 = input()
+  print("Enter answer option 3:")
+  answer_3 = input()
+  print("Enter answer option 4:")
+  answer_4 = input()
+  print("Chapter: " + create_chapter)
+  print(question_1)
+  print("  ", "a.)", answer_1)
+  print("  ", "b.)", answer_2)
+  print("  ", "c.)", answer_3)
+  print("  ", "d.)", answer_4) 
+  answers.append(answer_1 + answer_2 + answer_3 +   answer_4)
+  question.append(question_1)
+elif create_question == "Select" or create_question == "select": 
+  print("Select a chapter (enter a digit between 1 and 2):")
+  chosen_chapter = input() #Only 2 chapters for demonstration of Select option.
+  if chosen_chapter == "1":
+    print("Select a question (enter digit): ")
+    chosen_question = input()
+    if chosen_question == "1":
+        print(chapter_1q1)
+        print("  ", "a.)", chapter_1a1)
+        print("  ", "b.)", chapter_1a2)
+        print("  ", "c.)", chapter_1a3)
+        print("  ", "d.)", chapter_1a4)
+        print("Enter your answer (a, b, c, or d):")
+        user_answerc1q1 = input()
+        if user_answerc1q1 == "a" or user_answerc1q1 == "A":
+          print("Incorrect!")
+        elif user_answerc1q1 == "b" or user_answerc1q1 == "B":
+          print("Correct!")
+        elif user_answerc1q1 == "c" or user_answerc1q1 == "C":
+          print("Incorrect!")
+        elif user_answerc1q1 == "d" or user_answerc1q1 == "D":
+          print("Incorrect!")
+        else:
+          print("Invalid Entry.")   
+    elif chosen_question == "2":
+        print(chapter_1q2)
+        print("  ", "a.)", chapter_1a5)
+        print("  ", "b.)", chapter_1a6)
+        print("  ", "c.)", chapter_1a7)
+        print("  ", "d.)", chapter_1a8)
+        user_answerc1q2 = input()
+        if user_answerc1q2 == "a" or user_answerc1q2 == "A":
+          print("Correct!")
+        elif user_answerc1q2 == "b" or user_answerc1q2 == "B":
+          print("Incorrect!")
+        elif user_answerc1q2 == "c" or user_answerc1q2 == "C":
+          print("Incorrect!")
+        elif user_answerc1q2 == "d" or user_answerc1q2 == "D":
+          print("Incorrect!")
+        else:
+          print("Invalid Entry.")   
+    else:
+        print("Invalid Entry")
+  elif chosen_chapter == "2":
+    print("Select a question (enter digit):")
+    chosen_question = input()
+    if chosen_question == "1":
+      print(chapter_2q1)
+      print("  ", "a.)", chapter_2a1)
+      print("  ", "b.)", chapter_2a2)
+      print("  ", "c.)", chapter_2a3)
+      print("  ", "d.)", chapter_2a4)
+      user_answerc2q1 = input()
+      if user_answerc2q1 == "a" or user_answerc2q1 == "A":
+        print("Incorrect!")
+      elif user_answerc2q1 == "b" or user_answerc2q1 == "B":
+        print("Incorrect!")
+      elif user_answerc2q1 == "c" or user_answerc2q1 == "C":
+        print("Correct!")
+      elif user_answerc2q1 == "d" or user_answerc2q1 == "D":
+        print("Incorrect!")
+      else:
+        print("Invalid Entry.")   
+    elif chosen_question == "2":
+      print(chapter_2q2)
+      print("  ", "a.)", chapter_2a5)
+      print("  ", "b.)", chapter_2a6)
+      print("  ", "c.)", chapter_2a7)
+      print("  ", "d.)", chapter_2a8)
+      user_answerc2q2 = input()
+      if user_answerc2q2 == "a" or user_answerc2q2 == "A":
+        print("Correct!")
+      elif user_answerc2q2 == "b" or user_answerc2q2 == "B":
+        print("Incorrect!")
+      elif user_answerc2q2 == "c" or user_answerc2q2 == "C":
+        print("Incorrect!")
+      elif user_answerc2q2 == "d" or user_answerc2q2 == "D":
+        print("Incorrect!")
+      else:
+        print("Invalid Entry.")   
+    else:
+        print("Invalid Entry")
+  else:
+    print("No questions exist for this chapter.")
+else:
+  print("Invalid Entry")
+
+
+
+#Shows the four options and the answers
+options = ['a','b','c','d']
+answers = [2,1,1,0]
+
+choices = ['Letter A','Letter B','Letter C', 'Letter D']
+#Combining the three lists into a list tuple
+pyplot.bar(options,answers,color="pink",width=1/5)
+pyplot.xticks(options,choices)
+pyplot.title('Data Table')
+pyplot.show()
